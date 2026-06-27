@@ -330,6 +330,60 @@
       <div class="cost-callout">실제 클라이언트는 Unity, 서버는 같은 Wi-Fi의 Mac mini에서 실행해 Claude/OpenAI 키와 로그를 한 곳에서 관리합니다.</div>
     </section>
 
+    <section class="slide" id="slide-unity-experience" data-title="Unity Client Experience">
+      <p class="eyebrow">Unity Client</p>
+      <h2>Unity가 실제 Buddy 경험을 만들었습니다</h2>
+      <div class="unity-experience">
+        <article>
+          <span>01</span>
+          <strong>데스크톱 Buddy</strong>
+          <p>투명 오버레이 창 위에 2D 캐릭터가 떠 있고, 필요한 순간 호버 메뉴로 기능을 엽니다.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <strong>캡처와 결과 표시</strong>
+          <p>화면 영역 선택, OCR/번역, AI 분석 결과 창과 말풍선까지 Unity 안에서 이어집니다.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <strong>편집과 개인화</strong>
+          <p>캡처 이미지 주석, 캐릭터 커스터마이징, MBTI 말투, 이모지 표현을 클라이언트가 담당합니다.</p>
+        </article>
+        <article>
+          <span>04</span>
+          <strong>멀티 표현</strong>
+          <p>Photon으로 닉네임, 외형, 이모지를 공유해 다른 사람의 Buddy도 같은 화면에 보여줍니다.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-unity-flow" data-title="Unity Client Flow">
+      <p class="eyebrow">Client Processing Flow</p>
+      <h2>Unity에서 캡처 후 처리를 나눴습니다</h2>
+      <div class="unity-flow">
+        <div class="unity-flow-main">
+          <div><strong>1</strong><span>영역 선택</span><p>사용자가 전체 화면 또는 필요한 영역을 고릅니다.</p></div>
+          <div><strong>2</strong><span>PNG 캡처</span><p>Unity가 데스크톱 화면을 이미지로 준비합니다.</p></div>
+          <div><strong>3</strong><span>처리 분기</span><p>번역, 서버 분석, 이미지 주석 중 목적에 맞게 이어집니다.</p></div>
+        </div>
+        <div class="unity-flow-branches">
+          <article>
+            <strong>로컬 처리</strong>
+            <p>OCR과 번역은 Tesseract와 무료 번역 경로로 처리해 빠르게 결과를 보여줍니다.</p>
+          </article>
+          <article>
+            <strong>서버 분석</strong>
+            <p>이미지와 persona를 Mac mini 서버의 <code>/v2/analyze</code>로 보내 AI 답변을 받습니다.</p>
+          </article>
+          <article>
+            <strong>Unity 편집</strong>
+            <p>펜과 텍스트 주석은 클라이언트에서 적용하고 저장, 복사, 공유로 마무리합니다.</p>
+          </article>
+        </div>
+      </div>
+      <div class="unity-flow-note">이미지 편집은 Unity UI가 맡고, 서버는 화면 이해와 응답 생성에 집중합니다.</div>
+    </section>
+
     <section class="slide architecture-slide" id="slide-server-architecture" data-title="Server Architecture" aria-label="전체 아키텍처 다이어그램">
       <div class="architecture-figure">
         <img
