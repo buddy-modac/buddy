@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buddy 발표 자료 초안</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="toolbar" aria-label="발표 자료 컨트롤">
+    <a class="brand" href="#slide-1" aria-label="첫 슬라이드로 이동">
+      <span class="brand-mark">B</span>
+      <span>Buddy 발표 초안</span>
+    </a>
+    <nav class="controls" aria-label="슬라이드 이동">
+      <button type="button" id="prevSlide" aria-label="이전 슬라이드">이전</button>
+      <span id="slideCounter" class="counter">1 / 16</span>
+      <button type="button" id="nextSlide" aria-label="다음 슬라이드">다음</button>
+      <button type="button" id="fullscreenDeck" aria-label="전체화면으로 보기">전체화면</button>
+      <button type="button" id="printDeck" class="primary" aria-label="PDF로 저장">PDF 저장</button>
+    </nav>
+  </header>
+
+  <main class="deck" aria-label="Buddy 발표 자료">
+    <section class="slide slide-title" id="slide-1" data-title="Title">
+      <div class="slide-grid two">
+        <div class="title-copy">
+          <p class="eyebrow">2026.06.28 오후 발표 준비 초안</p>
+          <h1>Buddy</h1>
+          <p class="subtitle">화면 옆에서 맥락을 읽고 도와주는 데스크톱 AI 친구</p>
+          <div class="title-tags" aria-label="핵심 키워드">
+            <span>Screen Capture</span>
+            <span>AI Assistant</span>
+            <span>Persona Buddy</span>
+          </div>
+        </div>
+        <div class="desktop-visual" aria-label="Buddy 제품 콘셉트 이미지">
+          <div class="window-frame">
+            <div class="window-bar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="capture-box">
+              <span class="corner top-left"></span>
+              <span class="corner top-right"></span>
+              <span class="corner bottom-left"></span>
+              <span class="corner bottom-right"></span>
+              <p>선택한 화면</p>
+            </div>
+            <div class="buddy-orb" aria-hidden="true">
+              <span class="eye left"></span>
+              <span class="eye right"></span>
+            </div>
+            <div class="speech-bubble">요약, 번역, 설명까지 바로 도와줄게요.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-2" data-title="Agenda">
+      <p class="eyebrow">Presentation Flow</p>
+      <h2>10분 안에 전달할 이야기</h2>
+      <div class="agenda-list">
+        <div><strong>01</strong><span>팀 소개와 구성</span></div>
+        <div><strong>02</strong><span>해결하고 싶은 병목</span></div>
+        <div><strong>03</strong><span>Buddy 아이디어와 MVP</span></div>
+        <div><strong>04</strong><span>핵심 기능과 기술 접근</span></div>
+        <div><strong>05</strong><span>시연 영상과 향후 발전 방향</span></div>
+        <div><strong>06</strong><span>예상 질문과 답변</span></div>
+      </div>
+      <aside class="speaker-note">발표자료 제출 조건: PDF 제출, 발표자료 내 결과물 시연 영상 포함, 문제 정의와 구현 과정을 드러내기.</aside>
+    </section>
+
+    <section class="slide team-photo-slide" id="slide-team-photo" data-title="Team">
+      <div class="team-photo-layout">
+        <div class="team-photo-copy">
+          <p class="eyebrow">Team Composition</p>
+          <h2>안녕하세요<br />buddy 입니다</h2>
+          <p>MODAC·THON 2026에서 만난 Buddy 팀을 소개합니다.</p>
+        </div>
+        <figure class="team-photo-frame">
+          <img src="./assets/team-buddy.png" alt="MODAC·THON 2026 Buddy 팀 명찰 사진" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-3" data-title="Team Members">
+      <p class="eyebrow">Team Composition</p>
+      <h2>서로 다른 강점을 가진 5명의 팀</h2>
+      <div class="team-grid">
+        <article>
+          <h3>현우</h3>
+          <p>클라이언트 중심, 서버 가능</p>
+          <span>프론트엔드 · 제품 흐름 · 발표 구조</span>
+        </article>
+        <article>
+          <h3>해민</h3>
+          <p>서버, 클라이언트, DB 경험</p>
+          <span>Unity/C# · 에셋 활용 · 기능 검증</span>
+        </article>
+        <article>
+          <h3>승현</h3>
+          <p>Tauri, React, Python 경험</p>
+          <span>PM 관점 · UI/UX · 멀티 검증</span>
+        </article>
+        <article>
+          <h3>영민</h3>
+          <p>Unity, Python(AI) 선호</p>
+          <span>비주얼 · 캐릭터 · 프로토타입</span>
+        </article>
+        <article>
+          <h3>정호</h3>
+          <p>백엔드 역량과 새로운 시각</p>
+          <span>페르소나 · MBTI 구조 · API 설계</span>
+        </article>
+      </div>
+      <aside class="speaker-note">핵심 메시지: PM, 클라이언트, Unity, AI, 서버 관점이 섞여 있어 짧은 시간 안에 역할 분담이 가능한 팀.</aside>
+    </section>
+
+    <section class="slide" id="slide-4" data-title="Problem">
+      <p class="eyebrow">Problem Definition</p>
+      <h2>AI는 강력하지만, 사용하는 과정은 아직 깊습니다</h2>
+      <div class="problem-flow">
+        <div>화면을 본다</div>
+        <span></span>
+        <div>스크린샷을 찍는다</div>
+        <span></span>
+        <div>AI 서비스로 이동한다</div>
+        <span></span>
+        <div>프롬프트를 작성한다</div>
+        <span></span>
+        <div>다시 맥락을 맞춘다</div>
+      </div>
+      <div class="big-quote">
+        “스크린샷을 찍어서 GPT에 들어가고, 프롬프트를 치고, 다시 수정하는 일련의 뎁스를 줄이고 싶다.”
+      </div>
+      <div class="three-points">
+        <div><strong>Depth</strong><p>여러 앱을 오가며 작업 흐름이 끊김</p></div>
+        <div><strong>Context</strong><p>화면 맥락을 매번 다시 설명해야 함</p></div>
+        <div><strong>Friction</strong><p>딱딱한 문답보다 편한 상호작용이 필요</p></div>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-5" data-title="Insight">
+      <p class="eyebrow">Design Direction</p>
+      <h2>핵심 기능 하나는 뾰족하게, 경험은 친근하게</h2>
+      <div class="principles">
+        <article>
+          <span class="number">1</span>
+          <h3>확실한 핵심 기능</h3>
+          <p>캡처한 화면을 AI가 이해하고 바로 응답하는 흐름을 MVP의 중심으로 둡니다.</p>
+        </article>
+        <article>
+          <span class="number">2</span>
+          <h3>적당한 비주얼 완성도</h3>
+          <p>해커톤 기간 안에 구현 가능하면서도 보는 즉시 제품 콘셉트가 이해되도록 만듭니다.</p>
+        </article>
+        <article>
+          <span class="number">3</span>
+          <h3>취향을 존중하는 버디</h3>
+          <p>MBTI 페르소나와 캐릭터 커스터마이징으로 도구보다 동료에 가까운 느낌을 줍니다.</p>
+        </article>
+      </div>
+      <aside class="speaker-note">회의록의 “확실한 핵심 기능 + 적당한 비주얼 완성도”를 발표의 제품 철학으로 정리.</aside>
+    </section>
+
+    <section class="slide" id="slide-6" data-title="Concept">
+      <p class="eyebrow">Solution Concept</p>
+      <h2>Buddy는 화면 위에 상주하는 AI 작업 보조 도구입니다</h2>
+      <div class="concept-layout">
+        <div class="concept-card">
+          <h3>상주형 캐릭터</h3>
+          <p>화면 한쪽에 머무르며 사용자의 흐름을 방해하지 않고 필요한 순간에 반응합니다.</p>
+        </div>
+        <div class="concept-center">
+          <div class="mini-buddy" aria-hidden="true">
+            <span></span>
+            <span></span>
+          </div>
+          <p>Capture → Understand → Reply</p>
+        </div>
+        <div class="concept-card">
+          <h3>캡처 기반 AI</h3>
+          <p>선택한 화면을 요약, 번역, 설명하거나 이미지에 대한 질문에 답합니다.</p>
+        </div>
+      </div>
+      <div class="one-line">화면을 선택하면 AI가 이해하고, 데스크톱 캐릭터가 말풍선으로 도와주는 경험.</div>
+    </section>
+
+    <section class="slide" id="slide-7" data-title="Flow">
+      <p class="eyebrow">User Flow</p>
+      <h2>사용자는 “켜고, 고르고, 캡처하고, 답을 받는” 흐름만 기억하면 됩니다</h2>
+      <div class="flow-board">
+        <div><strong>1</strong><span>로그인</span><p>닉네임과 API Key 입력</p></div>
+        <div><strong>2</strong><span>페르소나</span><p>MBTI 선택 또는 퀴즈</p></div>
+        <div><strong>3</strong><span>버디 등장</span><p>기본 캐릭터와 커스터마이징</p></div>
+        <div><strong>4</strong><span>화면 캡처</span><p>전체 또는 영역 선택</p></div>
+        <div><strong>5</strong><span>AI 액션</span><p>번역, 설명, 질문, 이미지 수정</p></div>
+        <div><strong>6</strong><span>말풍선 응답</span><p>결과를 현재 화면에서 확인</p></div>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-8" data-title="Feature Capture">
+      <p class="eyebrow">Core Feature 1</p>
+      <h2>캡처 기반 AI: 화면 맥락을 바로 입력으로 바꿉니다</h2>
+      <div class="feature-split">
+        <div class="mock-capture">
+          <div class="mock-toolbar">
+            <span>영역 캡처</span>
+            <span>텍스트 추출</span>
+            <span>번역</span>
+            <span>질문</span>
+          </div>
+          <div class="mock-selection">
+            <p>선택 영역</p>
+          </div>
+        </div>
+        <div class="feature-copy">
+          <h3>기능 후보</h3>
+          <ul>
+            <li>스크린샷 전체/영역 저장</li>
+            <li>OCR과 이미지 이해를 통한 텍스트 추출</li>
+            <li>번역, 요약, 설명, 자유 질문</li>
+            <li>MarkItDown처럼 AI가 읽기 쉬운 형태로 변환</li>
+          </ul>
+          <p class="accent-line">반복되는 “캡처 → 이동 → 설명” 과정을 현재 화면 안에서 끝내는 것이 목표입니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-9" data-title="Feature Persona">
+      <p class="eyebrow">Core Feature 2</p>
+      <h2>페르소나 버디: 도구를 “함께 일하는 친구”처럼 만듭니다</h2>
+      <div class="persona-layout">
+        <div class="persona-card active">
+          <span>ENTJ</span>
+          <h3>빠른 정리형</h3>
+          <p>핵심을 먼저 잡고 다음 행동을 제안합니다.</p>
+        </div>
+        <div class="persona-card">
+          <span>INFJ</span>
+          <h3>맥락 공감형</h3>
+          <p>사용자의 의도와 감정을 고려해 부드럽게 답합니다.</p>
+        </div>
+        <div class="persona-card">
+          <span>INTP</span>
+          <h3>탐구 질문형</h3>
+          <p>러버덕처럼 정답보다 좋은 질문을 던집니다.</p>
+        </div>
+      </div>
+      <div class="persona-points">
+        <p>MBTI 기반 페르소나는 설명 가능한 축이 있어 빠르게 캐릭터 성향을 만들기 좋습니다.</p>
+        <p>캐릭터 외형, 투명도, 색상, 성장 요소는 사용자의 취향을 반영하는 확장 포인트입니다.</p>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-10" data-title="Feature Multi">
+      <p class="eyebrow">Expansion Feature</p>
+      <h2>멀티와 클립보드는 “개인 도구”를 “팀 도구”로 확장합니다</h2>
+      <div class="multi-diagram">
+        <div class="node user">User A</div>
+        <div class="line"></div>
+        <div class="node cloud">Shared Context</div>
+        <div class="line"></div>
+        <div class="node user">User B</div>
+      </div>
+      <div class="three-points compact">
+        <div><strong>멀티 클립보드</strong><p>복사한 자료를 팀원과 빠르게 공유</p></div>
+        <div><strong>상태 공유</strong><p>이모지나 짧은 텍스트로 현재 상태 표현</p></div>
+        <div><strong>캐릭터 동기화</strong><p>다른 사람의 버디를 화면에 함께 표시</p></div>
+      </div>
+      <aside class="speaker-note">MVP의 핵심은 캡처 AI이며, 멀티 기능은 시간이 허용될 때 보여줄 확장 방향으로 배치.</aside>
+    </section>
+
+    <section class="slide" id="slide-11" data-title="Tech">
+      <p class="eyebrow">Technical Approach</p>
+      <h2>짧은 시간 안에 시연 가능한 조합으로 검증합니다</h2>
+      <div class="tech-grid">
+        <article>
+          <h3>Client</h3>
+          <p>Unity/C# 중심 검토</p>
+          <span>데스크톱 앱, 캐릭터, 화면 캡처, 에셋 활용</span>
+        </article>
+        <article>
+          <h3>AI</h3>
+          <p>OpenAI, Claude, Gemini 비교</p>
+          <span>이미지 이해, OCR 보조, 비용과 응답 품질 확인</span>
+        </article>
+        <article>
+          <h3>Persona</h3>
+          <p>MBTI 질문셋과 결과 구조</p>
+          <span>초기 온보딩, 버디 성향, 말투 프롬프트</span>
+        </article>
+        <article>
+          <h3>Multi</h3>
+          <p>Photon 또는 Firebase REST</p>
+          <span>동기화, 클립보드, 플랫폼별 의존성 최소화</span>
+        </article>
+      </div>
+      <div class="cost-callout">사전 테스트 메모: OpenAI 이미지 분석은 비용이 낮고, Claude는 디테일하지만 비용이 높을 수 있음.</div>
+    </section>
+
+    <section class="slide" id="slide-12" data-title="Demo">
+      <p class="eyebrow">Demo Plan</p>
+      <h2>시연 영상은 “병목이 줄어드는 순간”을 보여줍니다</h2>
+      <div class="demo-layout">
+        <div class="video-placeholder" aria-label="시연 영상 삽입 영역">
+          <div class="play-icon"></div>
+          <strong>demo.mp4 삽입 영역</strong>
+          <span>docs/presentation/assets/demo.mp4</span>
+        </div>
+        <ol class="demo-steps">
+          <li><strong>온보딩</strong><span>닉네임, API Key, MBTI 페르소나 선택</span></li>
+          <li><strong>캡처</strong><span>화면 일부를 선택하고 액션 버튼 표시</span></li>
+          <li><strong>AI 응답</strong><span>번역, 설명, 질문 응답을 말풍선으로 확인</span></li>
+          <li><strong>확장</strong><span>멀티 클립보드나 상태 공유가 가능하다는 방향 제시</span></li>
+        </ol>
+      </div>
+      <aside class="speaker-note">발표자료에는 영상 포함 필수. 실제 프로토타입 조작은 부스 시간에 집중.</aside>
+    </section>
+
+    <section class="slide" id="slide-13" data-title="Impact">
+      <p class="eyebrow">Expected Impact</p>
+      <h2>Buddy가 줄이는 것은 기능 클릭 수가 아니라 작업의 마찰입니다</h2>
+      <div class="impact-grid">
+        <div>
+          <span class="metric">Before</span>
+          <h3>앱 이동과 설명 반복</h3>
+          <p>사용자는 화면 맥락을 직접 캡처하고, 업로드하고, 프롬프트로 다시 설명합니다.</p>
+        </div>
+        <div>
+          <span class="metric after">After</span>
+          <h3>현재 화면에서 바로 도움</h3>
+          <p>Buddy가 선택한 화면을 입력으로 받아 요약, 번역, 설명을 빠르게 제공합니다.</p>
+        </div>
+      </div>
+      <div class="impact-bottom">
+        <span>개발자</span>
+        <span>기획자</span>
+        <span>디자이너</span>
+        <span>일반 사용자</span>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-14" data-title="Roadmap">
+      <p class="eyebrow">Future Direction</p>
+      <h2>발표 이후에는 MVP를 제품 경험으로 확장합니다</h2>
+      <div class="roadmap">
+        <article>
+          <span>Now</span>
+          <h3>발표/부스 시연</h3>
+          <p>캡처 → AI 응답 → 캐릭터 말풍선 플로우를 안정적으로 보여주기.</p>
+        </article>
+        <article>
+          <span>Next</span>
+          <h3>사용성 강화</h3>
+          <p>스크롤 캡처, 클립보드 히스토리, 최근 기능 모아보기, 단축키 지원.</p>
+        </article>
+        <article>
+          <span>Later</span>
+          <h3>팀 협업 확장</h3>
+          <p>멀티 클립보드, 팀 상태 공유, 캐릭터 동기화, 성장형 커스터마이징.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-15" data-title="Q&A">
+      <p class="eyebrow">Q&A Prep</p>
+      <h2>예상 질문</h2>
+      <div class="qa-grid">
+        <article>
+          <h3>왜 캐릭터가 필요한가요?</h3>
+          <p>기능만 제공하는 도구보다 현재 화면에 머무르는 버디가 더 낮은 진입 장벽과 친근한 상호작용을 만듭니다.</p>
+        </article>
+        <article>
+          <h3>기존 캡처/AI 도구와 무엇이 다른가요?</h3>
+          <p>캡처와 AI 응답을 한 화면 안에서 이어 붙이고, 페르소나와 캐릭터를 통해 반복 사용 경험을 강화합니다.</p>
+        </article>
+        <article>
+          <h3>개인정보와 API Key는 어떻게 다루나요?</h3>
+          <p>초기 MVP는 개인 API Key 입력과 명시적 캡처 기반으로 동작하게 하며, 자동 수집은 범위에서 제외합니다.</p>
+        </article>
+        <article>
+          <h3>왜 Unity를 검토했나요?</h3>
+          <p>데스크톱 캐릭터와 비주얼, 에셋 활용에 강점이 있고 짧은 시간 안에 시각적 프로토타입을 만들기 좋습니다.</p>
+        </article>
+        <article>
+          <h3>실패하거나 어려웠던 점은?</h3>
+          <p>아이디어가 넓어질수록 MVP가 흐려졌고, 캡처 기반 AI라는 핵심 플로우로 다시 좁히는 과정이 필요했습니다.</p>
+        </article>
+        <article>
+          <h3>앞으로 가장 먼저 개선할 부분은?</h3>
+          <p>시연 안정성, OCR/이미지 이해 품질, 캡처 후 액션 선택 UX를 우선 개선합니다.</p>
+        </article>
+      </div>
+      <footer class="thanks">감사합니다</footer>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
