@@ -341,19 +341,19 @@
       <aside class="speaker-note">MVP는 Unity에서 다루기 쉬운 단일 JSON 요청/응답 중심. 서버는 결과와 대화 타임라인을 저장해 후속 질문 흐름을 지원.</aside>
     </section>
 
-    <section class="slide" id="slide-persona-pipeline" data-title="Persona Pipeline">
-      <p class="eyebrow">Persona Pipeline</p>
-      <h2>MBTI 스타일은 PersonaForge Phase 2 프롬프트로 서버에 붙습니다</h2>
+    <section class="slide" id="slide-persona-pipeline" data-title="MBTI Flow">
+      <p class="eyebrow">MBTI Flow</p>
+      <h2>MBTI를 고르면 Buddy의 응답 말투가 달라집니다</h2>
       <div class="pipeline">
-        <article><span>1</span><strong>MBTI Registry</strong><p>16개 유형과 표시용 설명을 서버 유효성 목록과 동기화</p></article>
-        <article><span>2</span><strong>Quiz Result</strong><p>퀴즈 결과로 나온 4글자 MBTI를 persona 값으로 사용</p></article>
-        <article><span>3</span><strong>Phase 2 Prompt</strong><p>베이스 어시스턴트, 인지기능 스타일, 가드레일을 결합</p></article>
-        <article><span>4</span><strong>Styled Toggle</strong><p>스타일이 방해될 때 styled:false로 기본 모드 전환</p></article>
+        <article><span>1</span><strong>유형 선택</strong><p>사용자가 16개 MBTI 중 하나를 직접 고릅니다.</p></article>
+        <article><span>2</span><strong>퀴즈 결과</strong><p>퀴즈를 풀면 결과 MBTI를 그대로 사용할 수 있습니다.</p></article>
+        <article><span>3</span><strong>말투 반영</strong><p>서버가 선택한 MBTI에 맞춰 응답 톤을 조정합니다.</p></article>
+        <article><span>4</span><strong>기본 말투</strong><p>정확한 설명이 더 중요하면 담백한 기본 응답으로 바꿉니다.</p></article>
       </div>
       <div class="metric-strip">
-        <div><strong>16</strong><span>MBTI Types</span></div>
-        <div><strong>T/F</strong><span>Model Routing</span></div>
-        <div><strong>2</strong><span>Response Modes</span></div>
+        <div><strong>16</strong><span>MBTI 유형</span></div>
+        <div><strong>선택</strong><span>직접 선택 또는 퀴즈</span></div>
+        <div><strong>전환</strong><span>MBTI 말투 ↔ 기본 말투</span></div>
       </div>
     </section>
 
@@ -364,12 +364,12 @@
         <article>
           <h3>Text / Vision Eval</h3>
           <p>번역, 질문, 설명에서 모델별 품질·비용·지연시간을 비교했습니다.</p>
-          <strong>gpt-5.4-mini: 빠르고 비용 효율적</strong>
+          <strong>GPT-5.4 mini: 빠르고 비용 효율적</strong>
         </article>
         <article>
-          <h3>Persona Routing</h3>
-          <p>F형 페르소나는 Claude가 더 잘 살리고, T형은 GPT mini로도 충분했습니다.</p>
-          <strong>F → Claude · T → GPT mini</strong>
+          <h3>MBTI 말투 선택</h3>
+          <p>감정형 말투는 Claude Haiku가 더 자연스럽고, 분석형은 GPT-5.4 mini로도 충분했습니다.</p>
+          <strong>F → Claude Haiku · T → GPT-5.4 mini</strong>
         </article>
         <article>
           <h3>Response Strategy</h3>
@@ -381,6 +381,32 @@
           <p>이미지 생성은 가능하지만 긴 스크린샷 편집은 텍스트 보존 리스크가 컸습니다.</p>
           <strong>MVP 핵심에서는 분리</strong>
         </article>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-eval-summary" data-title="Eval Reports">
+      <p class="eyebrow">Eval Reports</p>
+      <h2>검증 리포트는 세 가지 결론으로 정리했습니다</h2>
+      <div class="report-layout">
+        <div class="report-bars">
+          <h3>작업 응답 속도 평균</h3>
+          <div class="bar-row">
+            <span>Claude Haiku</span>
+            <div class="bar-track"><i style="width: 100%"></i></div>
+            <strong>4.63s</strong>
+          </div>
+          <div class="bar-row">
+            <span>GPT-5.4 mini</span>
+            <div class="bar-track"><i style="width: 67%"></i></div>
+            <strong>3.11s</strong>
+          </div>
+          <p>8개 작업 셀 기준 GPT-5.4 mini가 모두 더 빨랐고, 정확도는 동급이었습니다.</p>
+        </div>
+        <div class="report-table">
+          <div><strong>AI 모델 평가</strong><span>최고 점수 99/100, 최저 비용 $0.001781 → 빠른 기본 응답은 GPT-5.4 mini 중심</span></div>
+          <div><strong>MBTI 재현 평가</strong><span>ENFP/ENFJ 같은 감정형은 Claude Haiku가 말투를 더 잘 살림</span></div>
+          <div><strong>이미지 편집 평가</strong><span>15개 케이스 테스트 결과, 긴 스크린샷 편집은 텍스트 보존 리스크가 커서 MVP에서 제외</span></div>
+        </div>
       </div>
     </section>
 
