@@ -6,9 +6,15 @@ const fullscreenButton = document.getElementById("fullscreenDeck");
 const counter = document.getElementById("slideCounter");
 
 let currentIndex = 0;
+const presentationBase = { width: 1280, height: 720 };
 
 function isPresentationMode() {
   return document.body.classList.contains("is-fullscreen");
+}
+
+function updatePresentationScale() {
+  const scale = Math.min(window.innerWidth / presentationBase.width, window.innerHeight / presentationBase.height);
+  document.documentElement.style.setProperty("--presentation-scale", scale.toFixed(4));
 }
 
 function updateCounter(index) {
@@ -58,6 +64,11 @@ printButton.addEventListener("click", () => window.print());
 function setPresentationMode(isActive) {
   document.body.classList.toggle("is-fullscreen", isActive);
   fullscreenButton.textContent = isActive ? "전체화면 종료" : "전체화면";
+  if (isActive) {
+    updatePresentationScale();
+  } else {
+    document.documentElement.style.removeProperty("--presentation-scale");
+  }
   updateCounter(currentIndex);
 }
 
@@ -126,6 +137,12 @@ window.addEventListener("keydown", (event) => {
   if (event.key === "End") {
     event.preventDefault();
     scrollToSlide(slides.length - 1);
+  }
+});
+
+window.addEventListener("resize", () => {
+  if (isPresentationMode()) {
+    updatePresentationScale();
   }
 });
 
