@@ -55,11 +55,9 @@ a {
 
 body.is-fullscreen .toolbar {
   position: fixed;
-  right: 16px;
-  left: 16px;
-  border: 1px solid rgba(38, 55, 71, 0.12);
-  border-radius: 8px;
-  box-shadow: 0 10px 36px rgba(23, 32, 38, 0.16);
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
 }
 
 .brand {
@@ -168,14 +166,18 @@ body.is-fullscreen .toolbar {
 
 body.is-fullscreen .deck {
   min-height: 100vh;
+  display: grid;
+  place-items: center;
   justify-content: center;
-  gap: 18px;
-  padding: 68px 16px 16px;
+  gap: 0;
+  padding: 0;
   scroll-snap-type: y mandatory;
 }
 
 body.is-fullscreen .slide {
-  width: min(calc(100vw - 32px), calc((100vh - 96px) * 16 / 9), 1440px);
+  width: min(100vw, calc(100vh * 16 / 9));
+  border-radius: 0;
+  box-shadow: none;
 }
 
 body.is-fullscreen .slide:not(.is-active) {

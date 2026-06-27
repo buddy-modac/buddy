@@ -95,6 +95,19 @@ document.addEventListener("fullscreenchange", () => {
 });
 
 window.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && isPresentationMode()) {
+    event.preventDefault();
+
+    if (document.fullscreenElement) {
+      document.exitFullscreen();
+    } else {
+      setPresentationMode(false);
+      slides[currentIndex].scrollIntoView({ behavior: "auto", block: "center" });
+    }
+
+    return;
+  }
+
   if (event.key === "ArrowRight" || event.key === "PageDown" || event.key === " ") {
     event.preventDefault();
     scrollToSlide(currentIndex + 1);
