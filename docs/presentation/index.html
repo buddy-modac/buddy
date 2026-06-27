@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Buddy 발표 자료 초안</title>
-  <link rel="stylesheet" href="./styles.css?v=20260628-21" />
+  <link rel="stylesheet" href="./styles.css?v=20260628-36" />
 </head>
 <body>
   <header class="toolbar" aria-label="발표 자료 컨트롤">
@@ -27,7 +27,6 @@
         <div class="title-copy">
           <p class="eyebrow">MODAC·THON 2026</p>
           <h1>Buddy</h1>
-          <p class="subtitle">화면 옆에서 맥락을 읽고 도와주는 데스크톱 AI 친구</p>
           <div class="title-tags" aria-label="핵심 키워드">
             <span>Screen Capture</span>
             <span>AI Assistant</span>
@@ -44,104 +43,16 @@
       <p class="eyebrow">Presentation Flow</p>
       <h2>10분 안에 전달할 이야기</h2>
       <div class="agenda-list">
-        <div><strong>01</strong><span>팀 소개와 역할 구조</span></div>
-        <div><strong>02</strong><span>문제 정의와 프로젝트 메시지</span></div>
-        <div><strong>03</strong><span>Buddy 서비스와 핵심 기능</span></div>
-        <div><strong>04</strong><span>사용자 흐름과 시연</span></div>
-        <div><strong>05</strong><span>구현 결정과 전체 아키텍처</span></div>
-        <div><strong>06</strong><span>Unity 클라이언트와 Mac mini 서버</span></div>
-        <div><strong>07</strong><span>AI 모델 검증과 UI 자동화</span></div>
-        <div><strong>08</strong><span>결과와 향후 개선</span></div>
+        <div><strong>01</strong><span>문제 정의</span></div>
+        <div><strong>02</strong><span>서비스 소개</span></div>
+        <div><strong>03</strong><span>핵심 기능</span></div>
+        <div><strong>04</strong><span>시연</span></div>
+        <div><strong>05</strong><span>구현 흐름과 역할 분담</span></div>
+        <div><strong>06</strong><span>Unity 구현 기여</span></div>
+        <div><strong>07</strong><span>AI 토큰 활용</span></div>
+        <div><strong>08</strong><span>결론과 확장 방향</span></div>
       </div>
       <aside class="speaker-note">발표자료 제출 조건: PDF 제출, 발표자료 내 결과물 시연 영상 포함, 문제 정의와 구현 과정을 드러내기.</aside>
-    </section>
-
-    <section class="slide team-photo-slide" id="slide-team-photo" data-title="Team">
-      <div class="team-photo-layout">
-        <div class="team-photo-copy">
-          <p class="eyebrow">Team Composition</p>
-          <h2>안녕하세요<br />buddy 입니다</h2>
-          <p>MODAC·THON 2026에서 만난 Buddy 팀을 소개합니다.</p>
-        </div>
-        <figure class="team-photo-frame">
-          <img src="./assets/team-buddy.png" alt="MODAC·THON 2026 Buddy 팀 명찰 사진" />
-        </figure>
-      </div>
-    </section>
-
-    <section class="slide" id="slide-3" data-title="Team Members">
-      <p class="eyebrow">Team Composition</p>
-      <h2>각자의 역량으로 역할을 나눴습니다</h2>
-      <div class="team-grid">
-        <article>
-          <h3>현우</h3>
-          <div class="member-tags">
-            <span>FE 개발자</span>
-          </div>
-          <div class="member-info">
-            <div><strong>역량</strong><small>프론트엔드 · 제품 흐름</small></div>
-            <div><strong>역할</strong><small>문서 관리 · 발표 구조<br />AI 모델 테스트/비교<br />MBTI 데이터 수집</small></div>
-          </div>
-        </article>
-        <article>
-          <h3>해민</h3>
-          <div class="member-tags">
-            <span>게임 클라이언트 개발자</span>
-            <span>Unity</span>
-          </div>
-          <div class="member-info">
-            <div><strong>역량</strong><small>Unity/C# · 에셋 활용</small></div>
-            <div><strong>역할</strong><small>Unity 클라이언트 개발<br />개발 환경 세팅<br />필요 에셋 선정</small></div>
-          </div>
-        </article>
-        <article>
-          <h3>승현</h3>
-          <div class="member-tags">
-            <span>게임 클라이언트 개발자</span>
-            <span>Unity</span>
-          </div>
-          <div class="member-info">
-            <div><strong>역량</strong><small>멀티 서버 · 연동 검증</small></div>
-            <div><strong>역할</strong><small>Photon 멀티 서버 구성<br />Unity 클라이언트 연동<br />접속 테스트</small></div>
-          </div>
-        </article>
-        <article>
-          <h3>영민</h3>
-          <div class="member-tags">
-            <span>게임 클라이언트 개발자</span>
-            <span>Unreal</span>
-          </div>
-          <div class="member-info">
-            <div><strong>역량</strong><small>UI/UX · 비주얼 제작</small></div>
-            <div><strong>역할</strong><small>Unity 클라이언트 개발<br />UI/사용성 개선<br />이미지·에셋 적용</small></div>
-          </div>
-        </article>
-        <article>
-          <h3>정호</h3>
-          <div class="member-tags">
-            <span>인프라/서버 개발자</span>
-          </div>
-          <div class="member-info">
-            <div><strong>역량</strong><small>서버 설계 · API 개선</small></div>
-            <div><strong>역할</strong><small>MBTI 서버 구현<br />API 테스트/벤치마크<br />클립보드 기능 구현</small></div>
-          </div>
-        </article>
-      </div>
-      <aside class="speaker-note">핵심 메시지: 프론트엔드, 게임 클라이언트, AI, 서버 관점이 섞여 있어 짧은 시간 안에 역할 분담이 가능한 팀.</aside>
-    </section>
-
-    <section class="slide team-role-slide" id="slide-team-role-breakdown" data-title="Team Role Breakdown" aria-label="Buddy 팀 역할 구조도">
-      <div class="team-role-title">
-        <p class="eyebrow">Team Role Breakdown</p>
-        <h2>Buddy 팀 역할 구조도</h2>
-      </div>
-      <div class="team-role-figure">
-        <img
-          class="team-role-image"
-          src="./assets/team-role-breakdown.png"
-          alt="현우, 정호, 해민, 영민, 승현의 역할과 작업 의존 관계를 정리한 Buddy 팀 역할 구조도"
-        />
-      </div>
     </section>
 
     <section class="slide" id="slide-4" data-title="Problem">
@@ -173,34 +84,6 @@
       <h2>일하는 우리의 삶을 <span class="bracket-word">[이어지게]</span> <span class="no-break">만드는</span> 작은 실험</h2>
     </section>
 
-    <section class="slide buddy-intro-slide" id="slide-buddy-intro" data-title="Buddy Introduction">
-      <p class="eyebrow">Buddy Service</p>
-      <h2>같은 곳을 바라보며,<br />마음까지 맞춰<br />맥락과 질문을 이어주는 동료</h2>
-      <p>Buddy는 현재 화면을 함께 보고, 사용자의 성향에 맞춰 필요한 답을 이어주는 데스크톱 AI 동료입니다.</p>
-    </section>
-
-    <section class="slide" id="slide-5" data-title="Insight">
-      <p class="eyebrow">Design Direction</p>
-      <h2>핵심 기능 하나는 뾰족하게, 경험은 친근하게</h2>
-      <div class="principles">
-        <article>
-          <span class="number">1</span>
-          <h3>확실한 핵심 기능</h3>
-          <p>캡처한 화면을 AI가 이해하고 바로 응답하는 흐름을 MVP의 중심으로 둡니다.</p>
-        </article>
-        <article>
-          <span class="number">2</span>
-          <h3>적당한 비주얼 완성도</h3>
-          <p>해커톤 기간 안에 구현 가능하면서도 보는 즉시 제품 콘셉트가 이해되도록 만듭니다.</p>
-        </article>
-        <article>
-          <span class="number">3</span>
-          <h3>취향을 존중하는 버디</h3>
-          <p>MBTI 페르소나와 캐릭터 커스터마이징으로 도구보다 동료에 가까운 느낌을 줍니다.</p>
-        </article>
-      </div>
-    </section>
-
     <section class="slide" id="slide-6" data-title="Concept">
       <p class="eyebrow">Solution Concept</p>
       <h2>Buddy는 화면 위에 상주하는 AI 작업 보조 도구입니다</h2>
@@ -214,29 +97,16 @@
           <p>Capture → Understand → Reply</p>
         </div>
         <div class="concept-card">
-          <h3>캡처 기반 AI</h3>
-          <p>선택한 화면을 요약, 번역, 설명하거나 이미지에 대한 질문에 답합니다.</p>
+          <h3>캡처 기반 처리</h3>
+          <p>선택한 화면을 요약, 번역, 설명하거나 이미지에 대한 질문을 처리합니다.</p>
         </div>
       </div>
-      <div class="one-line">화면을 선택하면 AI가 이해하고, 데스크톱 캐릭터가 말풍선으로 도와주는 경험.</div>
-    </section>
-
-    <section class="slide" id="slide-7" data-title="Flow">
-      <p class="eyebrow">User Flow</p>
-      <h2>켜고, 고르고, 캡처하면<br />Buddy가 답합니다</h2>
-      <div class="flow-board">
-        <div><strong>1</strong><span>접속</span><p>닉네임과 Mac mini 서버 연결 확인</p></div>
-        <div><strong>2</strong><span>페르소나</span><p>MBTI 선택 또는 퀴즈</p></div>
-        <div><strong>3</strong><span>버디 등장</span><p>기본 캐릭터와 커스터마이징</p></div>
-        <div><strong>4</strong><span>화면 캡처</span><p>전체 또는 영역 선택</p></div>
-        <div><strong>5</strong><span>AI 액션</span><p>번역, 설명, 질문, 편집 보조</p></div>
-        <div><strong>6</strong><span>말풍선 응답</span><p>결과를 현재 화면에서 확인</p></div>
-      </div>
+      <div class="one-line">화면을 선택하면 이해, 답변, 공유가 현재 작업 흐름 안에서 이어지는 경험.</div>
     </section>
 
     <section class="slide" id="slide-8" data-title="Feature Capture">
       <p class="eyebrow">Core Feature 1</p>
-      <h2>캡처 기반 AI: 화면 맥락을 바로 입력으로 바꿉니다</h2>
+      <h2>캡처 기반 AI: 화면 밖으로 나가지 않고 흐름을 이어갑니다</h2>
       <div class="feature-split">
         <div class="mock-capture">
           <div class="mock-toolbar">
@@ -299,9 +169,9 @@
         <div class="node user">User B</div>
       </div>
       <div class="three-points compact">
-        <div><strong>멀티 클립보드</strong><p>복사한 자료를 팀원과 빠르게 공유</p></div>
-        <div><strong>상태 공유</strong><p>이모지나 짧은 텍스트로 현재 상태 표현</p></div>
-        <div><strong>캐릭터 동기화</strong><p>다른 사람의 버디를 화면에 함께 표시</p></div>
+        <div><strong>멀티 클립보드</strong><p>복사한 자료를 팀원과 빠르게 연결</p></div>
+        <div><strong>상태 공유</strong><p>이모지나 짧은 텍스트로 작업 맥락 공유</p></div>
+        <div><strong>캐릭터 동기화</strong><p>동료의 버디를 같은 작업 공간에 표시</p></div>
       </div>
     </section>
 
@@ -317,7 +187,7 @@
         <ol class="demo-steps">
           <li><strong>온보딩</strong><span>닉네임과 MBTI 페르소나 선택</span></li>
           <li><strong>캡처</strong><span>화면 일부를 선택하고 액션 버튼 표시</span></li>
-          <li><strong>AI 응답</strong><span>번역, 설명, 질문 응답을 말풍선으로 확인</span></li>
+          <li><strong>AI 응답</strong><span>번역, 설명, 질문 응답을 결과 창에서 확인</span></li>
           <li><strong>확장</strong><span>멀티 클립보드나 상태 공유가 가능하다는 방향 제시</span></li>
         </ol>
       </div>
@@ -330,7 +200,7 @@
         <article>
           <span>결정</span>
           <h3>핵심 병목을 하나로 좁힘</h3>
-          <p>앱 이동과 맥락 재설명을 줄이기 위해 MVP를 “캡처 → AI 응답 → 말풍선 확인” 흐름에 집중했습니다.</p>
+          <p>앱 이동과 맥락 재설명을 줄이기 위해 MVP를 “캡처 → AI 응답 → 현재 화면 확인” 흐름에 집중했습니다.</p>
         </article>
         <article>
           <span>구현</span>
@@ -346,204 +216,41 @@
       <div class="implementation-note">이후 장표는 각 단계의 구현 근거와 실제 작업 결과입니다.</div>
     </section>
 
-    <section class="slide architecture-slide" id="slide-server-architecture" data-title="Server Architecture" aria-label="전체 아키텍처 다이어그램">
-      <div class="architecture-figure">
+    <section class="slide team-role-slide" id="slide-team-role-breakdown" data-title="Team Role Breakdown" aria-label="Buddy 팀 역할 구조도">
+      <div class="team-role-title">
+        <p class="eyebrow">Team Role Breakdown</p>
+        <h2>역할을 흐름에 맞춰 연결했습니다</h2>
+      </div>
+      <div class="team-role-figure">
         <img
-          class="architecture-image"
-          src="./assets/system-architecture.png"
-          alt="Unity 데스크톱 클라이언트가 같은 Wi-Fi의 Mac mini FastAPI 서버를 호출하고, 서버가 SQLite, Claude, OpenAI를 연결하는 전체 아키텍처 다이어그램"
+          class="team-role-image"
+          src="./assets/team-role-breakdown.png"
+          alt="현우, 정호, 해민, 영민, 승현의 역할과 작업 의존 관계를 정리한 Buddy 팀 역할 구조도"
         />
       </div>
     </section>
 
-    <section class="slide" id="slide-11" data-title="Tech">
-      <p class="eyebrow">Technical Approach</p>
-      <h2>짧은 시간 안에 시연 가능한 조합으로 검증합니다</h2>
-      <div class="tech-grid">
+    <section class="slide" id="slide-unity-contribution" data-title="Unity Client Contribution">
+      <p class="eyebrow">Unity Client Contribution</p>
+      <h2>Unity 클라이언트는 0→1 구현, 멀티 확장, 성장형 경험으로 완성했습니다</h2>
+      <div class="unity-contribution">
         <article>
-          <h3>Client</h3>
-          <p>Unity/C# 중심 검토</p>
-          <span>데스크톱 앱, 캐릭터, 화면 캡처, 에셋 활용</span>
+          <span>Core Client</span>
+          <h3>해민</h3>
+          <p>프로젝트 세팅, 데스크톱 Buddy, 캡처/주석, 무료 OCR/번역, <code>/v2/analyze</code> 서버 연동을 구현했습니다.</p>
         </article>
         <article>
-          <h3>AI Server</h3>
-          <p>Mac mini FastAPI 서버</p>
-          <span>Unity 요청 처리, 모델 라우팅, 결과 저장</span>
+          <span>Multiplayer</span>
+          <h3>승현</h3>
+          <p>Photon 룸 접속, 원격 외형 동기화, 이모지 RPC, macOS 캡처/클립보드 포팅으로 함께 쓰는 Buddy를 만들었습니다.</p>
         </article>
         <article>
-          <h3>Persona</h3>
-          <p>MBTI 질문셋과 결과 구조</p>
-          <span>초기 온보딩, 버디 성향, 말투 프롬프트</span>
-        </article>
-        <article>
-          <h3>Multi</h3>
-          <p>Photon</p>
-          <span>멀티 접속, 클립보드, 플랫폼별 의존성 최소화</span>
+          <span>Growth UX</span>
+          <h3>영민</h3>
+          <p>미션, 레벨, 파츠 해금, 치트 패널, Runtime UI 표준화로 반복 사용과 커스터마이즈 흐름을 정리했습니다.</p>
         </article>
       </div>
-      <div class="cost-callout">실제 클라이언트는 Unity, 서버는 같은 Wi-Fi의 Mac mini에서 실행해 Claude/OpenAI 키와 로그를 한 곳에서 관리합니다.</div>
-    </section>
-
-    <section class="slide" id="slide-unity-experience" data-title="Unity Client Experience">
-      <p class="eyebrow">Unity Client</p>
-      <h2>Unity가 실제 Buddy 경험을 만들었습니다</h2>
-      <div class="unity-experience">
-        <article>
-          <span>01</span>
-          <strong>데스크톱 Buddy</strong>
-          <p>투명 오버레이 창 위에 2D 캐릭터가 떠 있고, 필요한 순간 호버 메뉴로 기능을 엽니다.</p>
-        </article>
-        <article>
-          <span>02</span>
-          <strong>캡처와 결과 표시</strong>
-          <p>화면 영역 선택, OCR/번역, AI 분석 결과 창과 말풍선까지 Unity 안에서 이어집니다.</p>
-        </article>
-        <article>
-          <span>03</span>
-          <strong>편집과 개인화</strong>
-          <p>캡처 이미지 주석, 캐릭터 커스터마이징, MBTI 말투, 이모지 표현을 클라이언트가 담당합니다.</p>
-        </article>
-        <article>
-          <span>04</span>
-          <strong>멀티 표현</strong>
-          <p>Photon으로 닉네임, 외형, 이모지를 공유해 다른 사람의 Buddy도 같은 화면에 보여줍니다.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="slide" id="slide-unity-flow" data-title="Unity Client Flow">
-      <p class="eyebrow">Client Processing Flow</p>
-      <h2>Unity에서 캡처 후 처리를 나눴습니다</h2>
-      <div class="unity-flow">
-        <div class="unity-flow-main">
-          <div><strong>1</strong><span>영역 선택</span><p>사용자가 전체 화면 또는 필요한 영역을 고릅니다.</p></div>
-          <div><strong>2</strong><span>PNG 캡처</span><p>Unity가 데스크톱 화면을 이미지로 준비합니다.</p></div>
-          <div><strong>3</strong><span>처리 분기</span><p>번역, 서버 분석, 이미지 주석 중 목적에 맞게 이어집니다.</p></div>
-        </div>
-        <div class="unity-flow-branches">
-          <article>
-            <strong>로컬 처리</strong>
-            <p>OCR과 번역은 Tesseract와 무료 번역 경로로 처리해 빠르게 결과를 보여줍니다.</p>
-          </article>
-          <article>
-            <strong>서버 분석</strong>
-            <p>이미지와 persona를 Mac mini 서버의 <code>/v2/analyze</code>로 보내 AI 답변을 받습니다.</p>
-          </article>
-          <article>
-            <strong>Unity 편집</strong>
-            <p>펜과 텍스트 주석은 클라이언트에서 적용하고 저장, 복사, 공유로 마무리합니다.</p>
-          </article>
-        </div>
-      </div>
-      <div class="unity-flow-note">이미지 편집은 Unity UI가 맡고, 서버는 화면 이해와 응답 생성에 집중합니다.</div>
-    </section>
-
-    <section class="slide" id="slide-api-surface" data-title="API Surface">
-      <p class="eyebrow">API Surface</p>
-      <h2>Unity는 몇 개의 명확한 API만 호출하면 됩니다</h2>
-      <div class="api-layout">
-        <div class="api-primary">
-          <span>Core</span>
-          <strong>POST /v2/analyze</strong>
-          <p>캡처 이미지, OCR 텍스트, persona, mode를 보내 번역·설명·질문 응답을 JSON으로 받습니다.</p>
-        </div>
-        <div class="api-grid">
-          <article><strong>/message/{id}</strong><span>저장된 분석 결과 단건 조회</span></article>
-          <article><strong>/personas</strong><span>16개 MBTI 페르소나 목록</span></article>
-          <article><strong>/quiz/start · /quiz/answer</strong><span>퀴즈 결과를 persona로 사용</span></article>
-          <article><strong>/conversation/{cid}</strong><span>후속 질문을 위한 대화 타임라인</span></article>
-        </div>
-      </div>
-      <aside class="speaker-note">MVP는 Unity에서 다루기 쉬운 단일 JSON 요청/응답 중심. 서버는 결과와 대화 타임라인을 저장해 후속 질문 흐름을 지원.</aside>
-    </section>
-
-    <section class="slide" id="slide-persona-pipeline" data-title="MBTI Flow">
-      <p class="eyebrow">MBTI Flow</p>
-      <h2>MBTI를 고르면 Buddy의 응답 말투가 달라집니다</h2>
-      <div class="pipeline">
-        <article><span>1</span><strong>유형 선택</strong><p>사용자가 16개 MBTI 중 하나를 직접 고릅니다.</p></article>
-        <article><span>2</span><strong>퀴즈 결과</strong><p>퀴즈를 풀면 결과 MBTI를 그대로 사용할 수 있습니다.</p></article>
-        <article><span>3</span><strong>말투 반영</strong><p>서버가 선택한 MBTI에 맞춰 응답 톤을 조정합니다.</p></article>
-        <article><span>4</span><strong>기본 말투</strong><p>정확한 설명이 더 중요하면 담백한 기본 응답으로 바꿉니다.</p></article>
-      </div>
-      <div class="metric-strip">
-        <div><strong>16</strong><span>MBTI 유형</span></div>
-        <div><strong>선택</strong><span>직접 선택 또는 퀴즈</span></div>
-        <div><strong>전환</strong><span>MBTI 말투 ↔ 기본 말투</span></div>
-      </div>
-    </section>
-
-    <section class="slide" id="slide-eval-report" data-title="Model Evaluation">
-      <p class="eyebrow">Model Evaluation</p>
-      <h2>모델 선택은 감이 아니라 리포트로 검증했습니다</h2>
-      <div class="eval-grid">
-        <article>
-          <h3>Text / Vision Eval</h3>
-          <p>번역, 질문, 설명에서 모델별 품질·비용·지연시간을 비교했습니다.</p>
-          <strong>GPT-5.4 mini: 빠르고 비용 효율적</strong>
-        </article>
-        <article>
-          <h3>MBTI 말투 선택</h3>
-          <p>감정형 말투는 Claude Haiku가 더 자연스럽고, 분석형은 GPT-5.4 mini로도 충분했습니다.</p>
-          <strong>F → Claude Haiku · T → GPT-5.4 mini</strong>
-        </article>
-        <article>
-          <h3>Response Strategy</h3>
-          <p>실제 사용 범위는 Unity 클라이언트에서 안정적으로 처리하기 쉬운 단일 JSON 응답으로 정리했습니다.</p>
-          <strong>Single JSON response</strong>
-        </article>
-        <article>
-          <h3>Image Edit Report</h3>
-          <p>AI 서버는 화면 이해에 집중하고, 실제 편집 UI와 적용은 Unity 클라이언트가 담당합니다.</p>
-          <strong>서버 이해 · Unity 편집</strong>
-        </article>
-      </div>
-    </section>
-
-    <section class="slide" id="slide-eval-summary" data-title="Eval Reports">
-      <p class="eyebrow">Eval Reports</p>
-      <h2>검증 리포트는 세 가지 결론으로 정리했습니다</h2>
-      <div class="report-layout">
-        <div class="report-bars">
-          <h3>작업 응답 속도 평균</h3>
-          <div class="bar-row">
-            <span>Claude Haiku</span>
-            <div class="bar-track"><i style="width: 100%"></i></div>
-            <strong>4.63s</strong>
-          </div>
-          <div class="bar-row">
-            <span>GPT-5.4 mini</span>
-            <div class="bar-track"><i style="width: 67%"></i></div>
-            <strong>3.11s</strong>
-          </div>
-          <p>8개 작업 셀 기준 GPT-5.4 mini가 모두 더 빨랐고, 정확도는 동급이었습니다.</p>
-          <div class="tested-models">
-            <strong>테스트 모델</strong>
-            <span>Claude Haiku</span>
-            <span>Claude Sonnet</span>
-            <span>GPT-5.4</span>
-            <span>GPT-5.4 mini</span>
-            <span>gpt-image-1 / 1.5 / 2</span>
-          </div>
-        </div>
-        <div class="report-table">
-          <div><strong>AI 모델 평가</strong><span>최고 점수 99/100, 최저 비용 $0.001781 → 빠른 기본 응답은 GPT-5.4 mini 중심</span></div>
-          <div><strong>MBTI 재현 평가</strong><span>ENFP/ENFJ 같은 감정형은 Claude Haiku가 말투를 더 잘 살림</span></div>
-          <div><strong>이미지 편집 평가</strong><span>긴 스크린샷 편집은 텍스트 보존 리스크가 있어 서버는 이해에 집중하고 Unity가 편집을 담당</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="slide" id="slide-api-decision" data-title="API Decisions">
-      <p class="eyebrow">API Design Decisions</p>
-      <h2>실험 결과를 서버 API 설계에 반영했습니다</h2>
-      <div class="decision-table">
-        <div><strong>/v2/analyze 단일 요청 중심</strong><span>최적화를 위해 병렬 요청도 검토했지만, 시연 안정성은 단일 요청이 가장 좋았습니다</span></div>
-        <div><strong>모델 라우팅은 서버 담당</strong><span>Unity는 단순히 persona와 mode만 전달</span></div>
-        <div><strong>API Key는 Mac mini 서버에 보관</strong><span>Unity 클라이언트에 Claude/OpenAI 키를 노출하지 않음</span></div>
-        <div><strong>응답에 model/ms_total 저장</strong><span>이후 모델 품질, 가격, 지연시간 개선의 근거로 사용</span></div>
-        <div><strong>이미지 편집은 Unity 클라이언트 담당</strong><span>서버는 화면 이해와 응답을 맡고, 편집 UI와 적용은 Unity에서 처리</span></div>
-      </div>
+      <div class="unity-contribution-note">세 작업을 합치면 Unity는 단순 화면이 아니라 Buddy의 실제 제품 경험 전체를 담당합니다.</div>
     </section>
 
     <section class="slide" id="slide-ai-token-usage" data-title="AI Token Usage">
@@ -577,6 +284,33 @@
         </article>
       </div>
       <div class="ai-token-line">단순 생성보다 모델 선택, 페르소나 검증, Unity UI 반복 자동화에 집중했습니다.</div>
+    </section>
+
+    <section class="slide" id="slide-eval-report" data-title="Model Evaluation">
+      <p class="eyebrow">Model Evaluation</p>
+      <h2>모델 선택은 감이 아니라 리포트로 검증했습니다</h2>
+      <div class="eval-grid">
+        <article>
+          <h3>현우 · Model Test</h3>
+          <p>모델별 속도·비용·정확도와 MBTI 말투 재현을 비교해 기본 응답 전략을 정리했습니다.</p>
+          <strong>GPT-5.4 mini: 빠르고 비용 효율적</strong>
+        </article>
+        <article>
+          <h3>MBTI 말투 선택</h3>
+          <p>감정형 말투는 Claude Haiku가 더 자연스럽고, 분석형은 GPT-5.4 mini로도 충분했습니다.</p>
+          <strong>F → Claude Haiku · T → GPT-5.4 mini</strong>
+        </article>
+        <article>
+          <h3>Response Strategy</h3>
+          <p>실제 사용 범위는 Unity 클라이언트에서 안정적으로 처리하기 쉬운 단일 JSON 응답으로 정리했습니다.</p>
+          <strong>Single JSON response</strong>
+        </article>
+        <article>
+          <h3>Image Edit Report</h3>
+          <p>AI 서버는 화면 이해에 집중하고, 실제 편집 UI와 적용은 Unity 클라이언트가 담당합니다.</p>
+          <strong>서버 이해 · Unity 편집</strong>
+        </article>
+      </div>
     </section>
 
     <section class="slide" id="slide-personaforge-judge" data-title="PersonaForge Judge">
@@ -642,29 +376,6 @@
       </div>
     </section>
 
-    <section class="slide" id="slide-13" data-title="Impact">
-      <p class="eyebrow">Expected Impact</p>
-      <h2>Buddy가 줄이는 것은 기능 클릭 수가 아니라 작업의 <span class="no-break">마찰</span></h2>
-      <div class="impact-grid">
-        <div>
-          <span class="metric">Before</span>
-          <h3>앱 이동과 설명 반복</h3>
-          <p>사용자는 화면 맥락을 직접 캡처하고, 업로드하고, 프롬프트로 다시 설명합니다.</p>
-        </div>
-        <div>
-          <span class="metric after">After</span>
-          <h3>현재 화면에서 바로 도움</h3>
-          <p>Buddy가 선택한 화면을 입력으로 받아 요약, 번역, 설명을 빠르게 제공합니다.</p>
-        </div>
-      </div>
-      <div class="impact-bottom">
-        <span>개발자</span>
-        <span>기획자</span>
-        <span>디자이너</span>
-        <span>일반 사용자</span>
-      </div>
-    </section>
-
     <section class="slide" id="slide-14" data-title="Roadmap">
       <p class="eyebrow">Future Direction</p>
       <h2>발표 이후에는 MVP를 제품 경험으로 확장합니다</h2>
@@ -672,7 +383,7 @@
         <article>
           <span>Now</span>
           <h3>발표/부스 시연</h3>
-          <p>캡처 → AI 응답 → 캐릭터 말풍선 플로우를 안정적으로 보여주기.</p>
+          <p>Buddy에서 이어주는 플로우를 안정적으로 보여주기.</p>
         </article>
         <article>
           <span>Next</span>
@@ -682,7 +393,7 @@
         <article>
           <span>Later</span>
           <h3>팀 협업 확장</h3>
-          <p>멀티 클립보드, 팀 상태 공유, 캐릭터 동기화, 성장형 커스터마이징.</p>
+          <p>프로젝트별 공유 히스토리, 팀 초대/권한 관리, 작업 맥락 자동 요약.</p>
         </article>
       </div>
     </section>
@@ -695,6 +406,327 @@
         <p class="eyebrow">Thank You</p>
         <h2>감사합니다</h2>
         <p>Buddy 팀 발표를 들어주셔서 감사합니다.</p>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-qa-reference-map" data-title="Q&A Reference Map">
+      <p class="eyebrow">Q&A Prep</p>
+      <h2>질문이 들어오면 네 가지 근거로 답합니다</h2>
+      <div class="qa-grid">
+        <article>
+          <h3>문제 정의 근거</h3>
+          <p>초기 회의에서 “캡처 → AI 서비스 이동 → 프롬프트 작성”의 뎁스를 줄이는 문제로 수렴했습니다.</p>
+        </article>
+        <article>
+          <h3>기술 선택 근거</h3>
+          <p>Unity는 화면 위 경험, Mac mini 서버는 API Key와 모델 라우팅, Photon은 멀티 표현을 맡았습니다.</p>
+        </article>
+        <article>
+          <h3>품질 검증 근거</h3>
+          <p>모델별 속도·비용·정확도, MBTI 말투, Runtime UI 명세와 audit로 감이 아니라 리포트 기반으로 결정했습니다.</p>
+        </article>
+        <article>
+          <h3>확장 질문 근거</h3>
+          <p>스크롤 캡처, 팀 클립보드, 성장/미션, 캐릭터 동기화는 회의와 Unity 작업 문서에 후속 확장으로 남겨두었습니다.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-13" data-title="Impact">
+      <p class="eyebrow">Expected Impact</p>
+      <h2>Buddy는 일하는 흐름을 다시 이어지게 합니다</h2>
+      <div class="impact-grid">
+        <div>
+          <span class="metric">Before</span>
+          <h3>작업 흐름이 끊기는 순간</h3>
+          <p>사용자는 화면을 캡처하고, 다른 서비스로 이동한 뒤, 같은 맥락을 다시 설명해야 합니다.</p>
+        </div>
+        <div>
+          <span class="metric after">After</span>
+          <h3>현재 화면 안에서 이어지는 흐름</h3>
+          <p>Buddy는 선택한 화면을 바로 이해하고, 답변과 공유까지 작업하던 자리에서 이어갈 수 있게 합니다.</p>
+        </div>
+      </div>
+      <div class="impact-bottom">
+        <span>캡처</span>
+        <span>이해</span>
+        <span>응답</span>
+        <span>공유</span>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-3" data-title="Team Members">
+      <p class="eyebrow">Team Composition</p>
+      <h2>그래서 이렇게 역할을 나눠 진행했습니다</h2>
+      <div class="team-grid">
+        <article>
+          <h3>현우</h3>
+          <div class="member-tags">
+            <span>FE 개발자</span>
+          </div>
+          <div class="member-info">
+            <div><strong>역량</strong><small>프론트엔드 · 제품 흐름</small></div>
+            <div><strong>역할</strong><small>문서 관리 · 발표 구조<br />AI 모델 테스트/비교<br />MBTI 데이터 수집</small></div>
+          </div>
+        </article>
+        <article>
+          <h3>해민</h3>
+          <div class="member-tags">
+            <span>게임 클라이언트 개발자</span>
+            <span>Unity</span>
+          </div>
+          <div class="member-info">
+            <div><strong>역량</strong><small>Unity/C# · 에셋 활용</small></div>
+            <div><strong>역할</strong><small>Unity 클라이언트 개발<br />개발 환경 세팅<br />필요 에셋 선정</small></div>
+          </div>
+        </article>
+        <article>
+          <h3>승현</h3>
+          <div class="member-tags">
+            <span>게임 클라이언트 개발자</span>
+            <span>Unity</span>
+          </div>
+          <div class="member-info">
+            <div><strong>역량</strong><small>멀티 서버 · 연동 검증</small></div>
+            <div><strong>역할</strong><small>Photon 멀티 서버 구성<br />Unity 클라이언트 연동<br />접속 테스트</small></div>
+          </div>
+        </article>
+        <article>
+          <h3>영민</h3>
+          <div class="member-tags">
+            <span>게임 클라이언트 개발자</span>
+            <span>Unreal</span>
+          </div>
+          <div class="member-info">
+            <div><strong>역량</strong><small>UI/UX · 비주얼 제작</small></div>
+            <div><strong>역할</strong><small>Unity 클라이언트 개발<br />UI/사용성 개선<br />이미지·에셋 적용</small></div>
+          </div>
+        </article>
+        <article>
+          <h3>정호</h3>
+          <div class="member-tags">
+            <span>인프라/서버 개발자</span>
+          </div>
+          <div class="member-info">
+            <div><strong>역량</strong><small>서버 설계 · API 개선</small></div>
+            <div><strong>역할</strong><small>MBTI 서버 구현<br />API 테스트/벤치마크<br />클립보드 기능 구현</small></div>
+          </div>
+        </article>
+      </div>
+      <aside class="speaker-note">핵심 메시지: 프론트엔드, 게임 클라이언트, AI, 서버 관점이 섞여 있어 짧은 시간 안에 역할 분담이 가능한 팀.</aside>
+    </section>
+
+    <section class="slide" id="slide-5" data-title="Insight">
+      <p class="eyebrow">Design Direction</p>
+      <h2>핵심 기능 하나는 뾰족하게, 경험은 친근하게</h2>
+      <div class="principles">
+        <article>
+          <span class="number">1</span>
+          <h3>확실한 핵심 기능</h3>
+          <p>캡처한 화면을 AI가 이해하고 바로 응답하는 흐름을 MVP의 중심으로 둡니다.</p>
+        </article>
+        <article>
+          <span class="number">2</span>
+          <h3>적당한 비주얼 완성도</h3>
+          <p>해커톤 기간 안에 구현 가능하면서도 보는 즉시 제품 콘셉트가 이해되도록 만듭니다.</p>
+        </article>
+        <article>
+          <span class="number">3</span>
+          <h3>취향을 존중하는 버디</h3>
+          <p>MBTI 페르소나와 캐릭터 커스터마이징으로 도구보다 동료에 가까운 느낌을 줍니다.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="slide buddy-intro-slide" id="slide-buddy-intro" data-title="Buddy Introduction">
+      <p class="eyebrow">Buddy Service</p>
+      <h2>같은 곳을 바라보며,<br />끊긴 맥락을 다시<br />이어주는 동료</h2>
+      <p>Buddy는 작업 화면을 벗어나지 않고 필요한 도움을 받고, 그 맥락을 동료와 공유할 수 있게 돕는 데스크톱 AI 동료입니다.</p>
+    </section>
+
+    <section class="slide team-photo-slide" id="slide-team-photo" data-title="Team">
+      <div class="team-photo-layout">
+        <div class="team-photo-copy">
+          <p class="eyebrow">Team Composition</p>
+          <h2>이 프로젝트를 위해<br />Buddy 팀이 모였습니다</h2>
+          <p>프로젝트 방향을 정한 뒤, 각자의 강점으로 역할을 나눴습니다.</p>
+        </div>
+        <figure class="team-photo-frame">
+          <img src="./assets/team-buddy.png" alt="MODAC·THON 2026 Buddy 팀 명찰 사진" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="slide architecture-slide" id="slide-server-architecture" data-title="Server Architecture" aria-label="전체 아키텍처 다이어그램">
+      <div class="architecture-figure">
+        <img
+          class="architecture-image"
+          src="./assets/system-architecture.png"
+          alt="Unity 데스크톱 클라이언트가 같은 Wi-Fi의 Mac mini FastAPI 서버를 호출하고, 서버가 SQLite, Claude, OpenAI를 연결하는 전체 아키텍처 다이어그램"
+        />
+      </div>
+    </section>
+
+    <section class="slide" id="slide-11" data-title="Tech">
+      <p class="eyebrow">Technical Approach</p>
+      <h2>짧은 시간 안에 시연 가능한 조합으로 검증합니다</h2>
+      <div class="tech-grid">
+        <article>
+          <h3>Client</h3>
+          <p>Unity/C# 중심 검토</p>
+          <span>데스크톱 앱, 캐릭터, 화면 캡처, 에셋 활용</span>
+        </article>
+        <article>
+          <h3>AI Server</h3>
+          <p>Mac mini FastAPI 서버</p>
+          <span>Unity 요청 처리, 모델 라우팅, 결과 저장</span>
+        </article>
+        <article>
+          <h3>Persona</h3>
+          <p>MBTI 질문셋과 결과 구조</p>
+          <span>초기 온보딩, 버디 성향, 말투 프롬프트</span>
+        </article>
+        <article>
+          <h3>Multi</h3>
+          <p>Photon</p>
+          <span>멀티 접속, 클립보드, 플랫폼별 의존성 최소화</span>
+        </article>
+      </div>
+      <div class="cost-callout">실제 클라이언트는 Unity, 서버는 같은 Wi-Fi의 Mac mini에서 실행해 Claude/OpenAI 키와 로그를 한 곳에서 관리합니다.</div>
+    </section>
+
+    <section class="slide" id="slide-unity-experience" data-title="Unity Client Experience">
+      <p class="eyebrow">Unity Client</p>
+      <h2>Unity가 실제 Buddy 경험을 만들었습니다</h2>
+      <div class="unity-experience">
+        <article>
+          <span>01</span>
+          <strong>데스크톱 Buddy</strong>
+          <p>투명 오버레이 창 위에 2D 캐릭터가 떠 있고, 필요한 순간 호버 메뉴로 기능을 엽니다.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <strong>캡처와 결과 표시</strong>
+          <p>화면 영역 선택, OCR/번역, AI 분석 결과 창까지 Unity 안에서 처리합니다.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <strong>편집과 개인화</strong>
+          <p>캡처 이미지 주석, 캐릭터 커스터마이징, MBTI 말투, 이모지 표현을 클라이언트가 담당합니다.</p>
+        </article>
+        <article>
+          <span>04</span>
+          <strong>멀티 표현</strong>
+          <p>Photon으로 닉네임, 외형, 이모지를 공유해 다른 사람의 Buddy도 같은 화면에 보여줍니다.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-eval-summary" data-title="Eval Reports">
+      <p class="eyebrow">Eval Reports</p>
+      <h2>검증 리포트는 세 가지 결론으로 정리했습니다</h2>
+      <div class="report-layout">
+        <div class="report-bars">
+          <h3>작업 응답 속도 평균</h3>
+          <div class="bar-row">
+            <span>Claude Haiku</span>
+            <div class="bar-track"><i style="width: 100%"></i></div>
+            <strong>4.63s</strong>
+          </div>
+          <div class="bar-row">
+            <span>GPT-5.4 mini</span>
+            <div class="bar-track"><i style="width: 67%"></i></div>
+            <strong>3.11s</strong>
+          </div>
+          <p>8개 작업 셀 기준 GPT-5.4 mini가 모두 더 빨랐고, 정확도는 동급이었습니다.</p>
+          <div class="tested-models">
+            <strong>테스트 모델</strong>
+            <span>Claude Haiku</span>
+            <span>Claude Sonnet</span>
+            <span>GPT-5.4</span>
+            <span>GPT-5.4 mini</span>
+            <span>gpt-image-1 / 1.5 / 2</span>
+          </div>
+        </div>
+        <div class="report-table">
+          <div><strong>AI 모델 평가</strong><span>최고 점수 99/100, 최저 비용 $0.001781 → 빠른 기본 응답은 GPT-5.4 mini 중심</span></div>
+          <div><strong>MBTI 재현 평가</strong><span>ENFP/ENFJ 같은 감정형은 Claude Haiku가 말투를 더 잘 살림</span></div>
+          <div><strong>이미지 편집 평가</strong><span>긴 스크린샷 편집은 텍스트 보존 리스크가 있어 서버는 이해에 집중하고 Unity가 편집을 담당</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-api-decision" data-title="API Decisions">
+      <p class="eyebrow">API Design Decisions</p>
+      <h2>실험 결과를 서버 API 설계에 반영했습니다</h2>
+      <div class="decision-table">
+        <div><strong>/v2/analyze 단일 요청 중심</strong><span>최적화를 위해 병렬 요청도 검토했지만, 시연 안정성은 단일 요청이 가장 좋았습니다</span></div>
+        <div><strong>모델 라우팅은 서버 담당</strong><span>Unity는 단순히 persona와 mode만 전달</span></div>
+        <div><strong>API Key는 Mac mini 서버에 보관</strong><span>Unity 클라이언트에 Claude/OpenAI 키를 노출하지 않음</span></div>
+        <div><strong>응답에 model/ms_total 저장</strong><span>이후 모델 품질, 가격, 지연시간 개선의 근거로 사용</span></div>
+        <div><strong>이미지 편집은 Unity 클라이언트 담당</strong><span>서버는 화면 이해와 응답을 맡고, 편집 UI와 적용은 Unity에서 처리</span></div>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-unity-flow" data-title="Unity Client Flow">
+      <p class="eyebrow">Client Processing Flow</p>
+      <h2>Unity에서 캡처 후 처리를 나눴습니다</h2>
+      <div class="unity-flow">
+        <div class="unity-flow-main">
+          <div><strong>1</strong><span>영역 선택</span><p>사용자가 전체 화면 또는 필요한 영역을 고릅니다.</p></div>
+          <div><strong>2</strong><span>PNG 캡처</span><p>Unity가 데스크톱 화면을 이미지로 준비합니다.</p></div>
+          <div><strong>3</strong><span>처리 분기</span><p>번역, 서버 분석, 이미지 주석 중 목적에 맞게 이어집니다.</p></div>
+        </div>
+        <div class="unity-flow-branches">
+          <article>
+            <strong>로컬 처리</strong>
+            <p>OCR과 번역은 Tesseract와 무료 번역 경로로 처리해 빠르게 결과를 보여줍니다.</p>
+          </article>
+          <article>
+            <strong>서버 분석</strong>
+            <p>이미지와 persona를 Mac mini 서버의 <code>/v2/analyze</code>로 보내 AI 답변을 받습니다.</p>
+          </article>
+          <article>
+            <strong>Unity 편집</strong>
+            <p>펜과 텍스트 주석은 클라이언트에서 적용하고 저장, 복사, 공유로 마무리합니다.</p>
+          </article>
+        </div>
+      </div>
+      <div class="unity-flow-note">이미지 편집은 Unity UI가 맡고, 서버는 화면 이해와 응답 생성에 집중합니다.</div>
+    </section>
+
+    <section class="slide" id="slide-api-surface" data-title="API Surface">
+      <p class="eyebrow">API Surface</p>
+      <h2>Unity는 몇 개의 명확한 API만 호출하면 됩니다</h2>
+      <div class="api-layout">
+        <div class="api-primary">
+          <span>Core</span>
+          <strong>POST /v2/analyze</strong>
+          <p>캡처 이미지, OCR 텍스트, persona, mode를 보내 번역·설명·질문 응답을 JSON으로 받습니다.</p>
+        </div>
+        <div class="api-grid">
+          <article><strong>/message/{id}</strong><span>저장된 분석 결과 단건 조회</span></article>
+          <article><strong>/personas</strong><span>16개 MBTI 페르소나 목록</span></article>
+          <article><strong>/quiz/start · /quiz/answer</strong><span>퀴즈 결과를 persona로 사용</span></article>
+          <article><strong>/conversation/{cid}</strong><span>후속 질문을 위한 대화 타임라인</span></article>
+        </div>
+      </div>
+      <aside class="speaker-note">MVP는 Unity에서 다루기 쉬운 단일 JSON 요청/응답 중심. 서버는 결과와 대화 타임라인을 저장해 후속 질문 흐름을 지원.</aside>
+    </section>
+
+    <section class="slide" id="slide-persona-pipeline" data-title="MBTI Flow">
+      <p class="eyebrow">MBTI Flow</p>
+      <h2>MBTI를 고르면 Buddy의 응답 말투가 달라집니다</h2>
+      <div class="pipeline">
+        <article><span>1</span><strong>유형 선택</strong><p>사용자가 16개 MBTI 중 하나를 직접 고릅니다.</p></article>
+        <article><span>2</span><strong>퀴즈 결과</strong><p>퀴즈를 풀면 결과 MBTI를 그대로 사용할 수 있습니다.</p></article>
+        <article><span>3</span><strong>말투 반영</strong><p>서버가 선택한 MBTI에 맞춰 응답 톤을 조정합니다.</p></article>
+        <article><span>4</span><strong>기본 말투</strong><p>정확한 설명이 더 중요하면 담백한 기본 응답으로 바꿉니다.</p></article>
+      </div>
+      <div class="metric-strip">
+        <div><strong>16</strong><span>MBTI 유형</span></div>
+        <div><strong>선택</strong><span>직접 선택 또는 퀴즈</span></div>
+        <div><strong>전환</strong><span>MBTI 말투 ↔ 기본 말투</span></div>
       </div>
     </section>
 
@@ -721,7 +753,7 @@
       <h2>기존 캡처/AI 도구와 무엇이 다른가요?</h2>
       <div class="qa-answer-panel">
         <span>답변</span>
-        <p>캡처와 AI 응답을 한 화면 안에서 이어 붙이고, 페르소나와 캐릭터를 통해 반복 사용 경험을 강화합니다. 핵심은 기능 수를 늘리는 것이 아니라 “캡처 → 이동 → 설명” 흐름을 현재 화면 안에서 줄이는 것입니다.</p>
+        <p>캡처와 AI 응답을 현재 화면 안에서 처리하고, 페르소나와 캐릭터를 통해 반복 사용 경험을 강화합니다. 핵심은 기능 수를 늘리는 것이 아니라 “캡처 → 이동 → 설명” 흐름을 현재 화면 안에서 줄이는 것입니다.</p>
       </div>
     </section>
 
@@ -752,12 +784,88 @@
       </div>
     </section>
 
+    <section class="slide qa-detail-slide" id="slide-qa-why-mbti" data-title="Q&A Why MBTI">
+      <p class="eyebrow">Q&A Prep</p>
+      <h2>왜 페르소나를 MBTI로 잡았나요?</h2>
+      <div class="qa-answer-panel">
+        <span>답변</span>
+        <p>짧은 해커톤 안에서 설명 가능한 성향 축이 필요했습니다. MBTI는 16개 유형과 말투 차이를 빠르게 만들 수 있고, 사용자가 직접 선택하거나 퀴즈로 진입하기 쉬워 초기 페르소나 실험에 적합했습니다.</p>
+      </div>
+    </section>
+
+    <section class="slide qa-detail-slide" id="slide-qa-local-ocr" data-title="Q&A Local OCR">
+      <p class="eyebrow">Q&A Prep</p>
+      <h2>OCR/번역을 왜 AI 서버와 분리했나요?</h2>
+      <div class="qa-answer-panel">
+        <span>답변</span>
+        <p>번역처럼 반복적이고 즉시성이 중요한 작업은 Tesseract와 무료 번역 경로로 빠르게 처리하고, AI 서버는 이미지 이해·질문 응답처럼 판단이 필요한 작업에 집중시켰습니다. 비용과 지연시간을 줄이기 위한 분리입니다.</p>
+      </div>
+    </section>
+
+    <section class="slide qa-detail-slide" id="slide-qa-mac-mini" data-title="Q&A Mac Mini">
+      <p class="eyebrow">Q&A Prep</p>
+      <h2>왜 Mac mini 서버를 따로 두었나요?</h2>
+      <div class="qa-answer-panel">
+        <span>답변</span>
+        <p>Unity 클라이언트에 Claude/OpenAI 키를 넣지 않고, 모델 라우팅과 로그 저장을 서버 한 곳에서 통제하기 위해서입니다. 클라이언트는 단일 JSON API만 호출하므로 시연과 디버깅도 단순해집니다.</p>
+      </div>
+    </section>
+
+    <section class="slide qa-detail-slide" id="slide-qa-image-edit" data-title="Q&A Image Edit">
+      <p class="eyebrow">Q&A Prep</p>
+      <h2>이미지 편집도 AI가 직접 하면 안 되나요?</h2>
+      <div class="qa-answer-panel">
+        <span>답변</span>
+        <p>긴 스크린샷이나 텍스트가 많은 이미지에서는 AI 편집이 글자를 깨뜨릴 수 있습니다. 그래서 서버는 화면 이해와 답변 생성에 집중하고, 펜·텍스트 주석·저장·복사는 Unity 클라이언트에서 직접 처리하도록 나눴습니다.</p>
+      </div>
+    </section>
+
+    <section class="slide qa-detail-slide" id="slide-qa-photon" data-title="Q&A Photon">
+      <p class="eyebrow">Q&A Prep</p>
+      <h2>멀티 기능은 MVP에 꼭 필요한가요?</h2>
+      <div class="qa-answer-panel">
+        <span>답변</span>
+        <p>MVP의 핵심은 캡처 기반 AI입니다. 다만 Photon 멀티, 이모지, 외형 동기화는 Buddy가 개인 도구에서 팀 경험으로 확장될 수 있음을 보여주는 백업 근거로 준비했습니다.</p>
+      </div>
+    </section>
+
+    <section class="slide qa-detail-slide" id="slide-qa-ai-usage" data-title="Q&A AI Usage">
+      <p class="eyebrow">Q&A Prep</p>
+      <h2>AI를 개발 과정에서 어떻게 활용했나요?</h2>
+      <div class="qa-answer-panel">
+        <span>답변</span>
+        <p>코드 작성만 맡긴 것이 아니라 모델 평가, MBTI 말투 검증, Unity Runtime UI 명세화, 스크린샷 기반 레이아웃 반복 개선에 사용했습니다. 특히 UI는 명세 → 구현 → 검증 → audit 흐름으로 통제했습니다.</p>
+      </div>
+    </section>
+
+    <section class="slide qa-detail-slide" id="slide-qa-demo-fallback" data-title="Q&A Demo Fallback">
+      <p class="eyebrow">Q&A Prep</p>
+      <h2>시연이 불안정하면 어떻게 설명할 수 있나요?</h2>
+      <div class="qa-answer-panel">
+        <span>답변</span>
+        <p>핵심 흐름을 “영역 선택 → 캡처 이미지 준비 → 로컬 OCR/번역 또는 서버 분석 → Unity 결과 표시”로 분해해 설명할 수 있습니다. 데모 치트와 저장된 결과 화면은 발표 중 같은 상태를 빠르게 재현하기 위한 장치입니다.</p>
+      </div>
+    </section>
+
     <section class="slide qa-detail-slide" id="slide-16-next-step" data-title="Q&A Next Step">
       <p class="eyebrow">Q&A Prep</p>
       <h2>앞으로 가장 먼저 개선할 부분은?</h2>
       <div class="qa-answer-panel">
         <span>답변</span>
         <p>시연 안정성, OCR/이미지 이해 품질, 캡처 후 액션 선택 UX를 우선 개선합니다.</p>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-7" data-title="Archive User Flow">
+      <p class="eyebrow">Archive</p>
+      <h2>켜고, 고르고, 캡처하면<br />Buddy가 답합니다</h2>
+      <div class="flow-board">
+        <div><strong>1</strong><span>접속</span><p>닉네임과 Mac mini 서버 연결 확인</p></div>
+        <div><strong>2</strong><span>페르소나</span><p>MBTI 선택 또는 퀴즈</p></div>
+        <div><strong>3</strong><span>버디 등장</span><p>기본 캐릭터와 커스터마이징</p></div>
+        <div><strong>4</strong><span>화면 캡처</span><p>전체 또는 영역 선택</p></div>
+        <div><strong>5</strong><span>AI 액션</span><p>번역, 설명, 질문, 편집 보조</p></div>
+        <div><strong>6</strong><span>결과 응답</span><p>결과를 현재 화면에서 확인</p></div>
       </div>
     </section>
   </main>
