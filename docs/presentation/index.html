@@ -92,27 +92,45 @@
       <div class="team-grid">
         <article>
           <h3>현우</h3>
-          <p>클라이언트 중심, 서버 가능</p>
+          <div class="member-tags">
+            <span>FE 개발자</span>
+          </div>
+          <p>프론트엔드와 발표 구조</p>
           <span>프론트엔드 · 제품 흐름 · 발표 구조</span>
         </article>
         <article>
           <h3>해민</h3>
-          <p>서버, 클라이언트, DB 경험</p>
+          <div class="member-tags">
+            <span>게임 클라이언트 개발자</span>
+            <span>Unity</span>
+          </div>
+          <p>Unity 클라이언트 개발</p>
           <span>Unity/C# · 에셋 활용 · 기능 검증</span>
         </article>
         <article>
           <h3>승현</h3>
-          <p>Tauri, React, Python 경험</p>
+          <div class="member-tags">
+            <span>게임 클라이언트 개발자</span>
+            <span>Unity</span>
+          </div>
+          <p>멀티 연동과 접속 검증</p>
           <span>PM 관점 · UI/UX · 멀티 검증</span>
         </article>
         <article>
           <h3>영민</h3>
-          <p>Unity, Python(AI) 선호</p>
+          <div class="member-tags">
+            <span>게임 클라이언트 개발자</span>
+            <span>Unreal</span>
+          </div>
+          <p>UI와 사용성 개선</p>
           <span>비주얼 · 캐릭터 · 프로토타입</span>
         </article>
         <article>
           <h3>정호</h3>
-          <p>백엔드 역량과 새로운 시각</p>
+          <div class="member-tags">
+            <span>인프라/서버 개발자</span>
+          </div>
+          <p>MBTI 서버와 인프라</p>
           <span>페르소나 · MBTI 구조 · API 설계</span>
         </article>
       </div>
@@ -201,13 +219,13 @@
 
     <section class="slide" id="slide-7" data-title="Flow">
       <p class="eyebrow">User Flow</p>
-      <h2>사용자는 “켜고, 고르고, 캡처하고, 답을 받는” 흐름만 기억하면 됩니다</h2>
+      <h2>켜고, 고르고, 캡처하면<br />Buddy가 답합니다</h2>
       <div class="flow-board">
         <div><strong>1</strong><span>접속</span><p>닉네임과 Mac mini 서버 연결 확인</p></div>
         <div><strong>2</strong><span>페르소나</span><p>MBTI 선택 또는 퀴즈</p></div>
         <div><strong>3</strong><span>버디 등장</span><p>기본 캐릭터와 커스터마이징</p></div>
         <div><strong>4</strong><span>화면 캡처</span><p>전체 또는 영역 선택</p></div>
-        <div><strong>5</strong><span>AI 액션</span><p>번역, 설명, 질문, 이미지 수정</p></div>
+        <div><strong>5</strong><span>AI 액션</span><p>번역, 설명, 질문, 편집 보조</p></div>
         <div><strong>6</strong><span>말풍선 응답</span><p>결과를 현재 화면에서 확인</p></div>
       </div>
     </section>
@@ -233,7 +251,7 @@
             <li>스크린샷 전체/영역 저장</li>
             <li>OCR과 이미지 이해를 통한 텍스트 추출</li>
             <li>번역, 요약, 설명, 자유 질문</li>
-            <li>MarkItDown처럼 AI가 읽기 쉬운 형태로 변환</li>
+            <li>AI가 읽기 쉬운 형태로 변환</li>
           </ul>
           <p class="accent-line">반복되는 “캡처 → 이동 → 설명” 과정을 현재 화면 안에서 끝내는 것이 목표입니다.</p>
         </div>
@@ -242,7 +260,7 @@
 
     <section class="slide" id="slide-9" data-title="Feature Persona">
       <p class="eyebrow">Core Feature 2</p>
-      <h2>페르소나 버디: 도구를 “함께 일하는 친구”처럼 만듭니다</h2>
+      <h2>페르소나 버디:<br />함께 일하는 친구처럼</h2>
       <div class="persona-layout">
         <div class="persona-card active">
           <span>ENTJ</span>
@@ -305,8 +323,8 @@
         </article>
         <article>
           <h3>Multi</h3>
-          <p>Photon 또는 Firebase REST</p>
-          <span>동기화, 클립보드, 플랫폼별 의존성 최소화</span>
+          <p>Photon</p>
+          <span>멀티 접속, 클립보드, 플랫폼별 의존성 최소화</span>
         </article>
       </div>
       <div class="cost-callout">실제 클라이언트는 Unity, 서버는 같은 Wi-Fi의 Mac mini에서 실행해 Claude/OpenAI 키와 로그를 한 곳에서 관리합니다.</div>
@@ -317,7 +335,7 @@
         <img
           class="architecture-image"
           src="./assets/system-architecture.png"
-          alt="Unity 데스크톱 클라이언트가 같은 Wi-Fi의 Mac mini FastAPI 서버를 호출하고, 서버가 PersonaForge, SQLite, Claude, OpenAI를 연결하는 전체 아키텍처 다이어그램"
+          alt="Unity 데스크톱 클라이언트가 같은 Wi-Fi의 Mac mini FastAPI 서버를 호출하고, 서버가 MBTI 말투 프롬프트, SQLite, Claude, OpenAI를 연결하는 전체 아키텍처 다이어그램"
         />
       </div>
     </section>
@@ -378,8 +396,8 @@
         </article>
         <article>
           <h3>Image Edit Report</h3>
-          <p>이미지 생성은 가능하지만 긴 스크린샷 편집은 텍스트 보존 리스크가 컸습니다.</p>
-          <strong>MVP 핵심에서는 분리</strong>
+          <p>AI 서버는 화면 이해에 집중하고, 실제 편집 UI와 적용은 Unity 클라이언트가 담당합니다.</p>
+          <strong>서버 이해 · Unity 편집</strong>
         </article>
       </div>
     </section>
@@ -413,7 +431,7 @@
         <div class="report-table">
           <div><strong>AI 모델 평가</strong><span>최고 점수 99/100, 최저 비용 $0.001781 → 빠른 기본 응답은 GPT-5.4 mini 중심</span></div>
           <div><strong>MBTI 재현 평가</strong><span>ENFP/ENFJ 같은 감정형은 Claude Haiku가 말투를 더 잘 살림</span></div>
-          <div><strong>이미지 편집 평가</strong><span>15개 케이스 테스트 결과, 긴 스크린샷 편집은 텍스트 보존 리스크가 커서 MVP에서 제외</span></div>
+          <div><strong>이미지 편집 평가</strong><span>긴 스크린샷 편집은 텍스트 보존 리스크가 있어 서버는 이해에 집중하고 Unity가 편집을 담당</span></div>
         </div>
       </div>
     </section>
@@ -422,11 +440,11 @@
       <p class="eyebrow">API Design Decisions</p>
       <h2>실험 결과를 서버 API 설계에 반영했습니다</h2>
       <div class="decision-table">
-        <div><strong>/v2/analyze 단일 요청 중심</strong><span>병렬 요청은 비용과 복잡도가 커서 MVP 기본값에서 제외</span></div>
+        <div><strong>/v2/analyze 단일 요청 중심</strong><span>최적화를 위해 병렬 요청도 검토했지만, 시연 안정성은 단일 요청이 가장 좋았습니다</span></div>
         <div><strong>모델 라우팅은 서버 담당</strong><span>Unity는 단순히 persona와 mode만 전달</span></div>
         <div><strong>API Key는 Mac mini 서버에 보관</strong><span>Unity 클라이언트에 Claude/OpenAI 키를 노출하지 않음</span></div>
         <div><strong>응답에 model/ms_total 저장</strong><span>이후 모델 품질, 가격, 지연시간 개선의 근거로 사용</span></div>
-        <div><strong>이미지 편집은 후속 기능</strong><span>텍스트 깨짐과 UI 변형 리스크가 있어 화면 이해를 우선</span></div>
+        <div><strong>이미지 편집은 Unity 클라이언트 담당</strong><span>서버는 화면 이해와 응답을 맡고, 편집 UI와 적용은 Unity에서 처리</span></div>
       </div>
     </section>
 
