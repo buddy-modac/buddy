@@ -1202,6 +1202,33 @@ body.is-fullscreen .slide:not(.is-active) {
   font-weight: 750;
 }
 
+.tested-models {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 28px;
+}
+
+.tested-models strong,
+.tested-models span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 7px 10px;
+  color: var(--navy);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.tested-models strong {
+  color: #fff;
+  background: var(--navy);
+  border-color: var(--navy);
+}
+
 .report-table {
   display: grid;
   gap: 14px;
